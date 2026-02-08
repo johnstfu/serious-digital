@@ -1,0 +1,79 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = 'Réalisation Commerce — SeRious | Visibilité SEO + IA doublée';
+const description = 'Étude de cas : comment un commerce a doublé sa visibilité en combinant SEO et optimisation pour l\'IA.';
+---
+
+<Layout title={title} description={description}>
+
+  <section class="section" style="background: linear-gradient(180deg, #FFF8F5 0%, #FFF1EB 100%);">
+    <div class="container-narrow">
+      <a href="/realisations" class="inline-flex items-center gap-1.5 text-sm text-muted hover:text-coral transition-colors mb-6">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Toutes les réalisations
+      </a>
+      <div class="badge-teal mb-4">Commerce</div>
+      <h1 class="text-hero mb-6">Doubler sa visibilité<br><span class="text-gradient">en croisant SEO et IA</span></h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-narrow">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div class="lg:col-span-2 space-y-10">
+          <div>
+            <h2 class="font-display font-bold text-xl mb-4 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-rose/10 flex items-center justify-center"><span class="text-rose font-bold text-sm">1</span></div>
+              Le problème
+            </h2>
+            <p class="text-muted leading-relaxed">Un site existant mais mal référencé, aucune donnée structurée, contenu non pensé pour l'IA. Le commerce était invisible pour ChatGPT et Gemini, et en page 3+ sur Google.</p>
+          </div>
+
+          <div>
+            <h2 class="font-display font-bold text-xl mb-4 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-amber/10 flex items-center justify-center"><span class="text-amber font-bold text-sm">2</span></div>
+              Ce qu'on a fait
+            </h2>
+            <p class="text-muted leading-relaxed">Audit complet, refonte technique SEO/GEO, FAQ structurées, données Schema.org enrichies. Stratégie digitale sur 6 mois avec contenu optimisé et accompagnement réseaux sociaux.</p>
+          </div>
+
+          <div>
+            <h2 class="font-display font-bold text-xl mb-4 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-teal/10 flex items-center justify-center"><span class="text-teal font-bold text-sm">3</span></div>
+              Les résultats
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {[
+                { stat: '+120%', label: 'Trafic organique' },
+                { stat: 'Cité', label: 'par Gemini et ChatGPT' },
+                { stat: '3x', label: 'plus de prises de contact' },
+              ].map((r) => (
+                <div class="card-cream p-5 text-center">
+                  <div class="text-2xl font-display font-bold text-gradient mb-1">{r.stat}</div>
+                  <p class="text-xs text-muted">{r.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <div class="card p-6">
+            <h3 class="font-display font-semibold text-lg mb-3">Fiche projet</h3>
+            <dl class="space-y-3 text-sm">
+              <div><dt class="text-muted">Secteur</dt><dd class="font-medium text-navy">Commerce de détail</dd></div>
+              <div><dt class="text-muted">Offre utilisée</dt><dd class="font-medium text-navy">Package complet</dd></div>
+              <div><dt class="text-muted">Durée</dt><dd class="font-medium text-navy">6 mois</dd></div>
+              <div><dt class="text-muted">Livrables</dt><dd class="font-medium text-navy">Refonte site + stratégie digitale complète</dd></div>
+            </dl>
+          </div>
+          <div class="rounded-3xl p-6 text-center" style="background: linear-gradient(135deg, rgba(20,184,166,0.05), rgba(37,99,235,0.05)); border: 1px solid rgba(20,184,166,0.1);">
+            <p class="text-sm text-muted mb-3">Situation similaire ?</p>
+            <a href="/contact" class="btn-primary text-sm !py-2.5 w-full">Demander un audit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

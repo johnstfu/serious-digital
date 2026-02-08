@@ -1,0 +1,79 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = 'Réalisation Restauration — SeRious | Snack recommandé par les IA';
+const description = 'Étude de cas : comment un snack sans présence en ligne est devenu recommandé par Perplexity et visible en page 1 Google.';
+---
+
+<Layout title={title} description={description}>
+
+  <section class="section" style="background: linear-gradient(180deg, #FFF8F5 0%, #FFF1EB 100%);">
+    <div class="container-narrow">
+      <a href="/realisations" class="inline-flex items-center gap-1.5 text-sm text-muted hover:text-coral transition-colors mb-6">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        Toutes les réalisations
+      </a>
+      <div class="badge-coral mb-4">Restauration</div>
+      <h1 class="text-hero mb-6">Un snack invisible qui devient<br><span class="text-gradient">recommandé par les IA</span></h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-narrow">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div class="lg:col-span-2 space-y-10">
+          <div>
+            <h2 class="font-display font-bold text-xl mb-4 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-rose/10 flex items-center justify-center"><span class="text-rose font-bold text-sm">1</span></div>
+              Le problème
+            </h2>
+            <p class="text-muted leading-relaxed">Aucune présence en ligne. Pas de site, pas de fiche Google. Les clients passaient devant sans savoir que le snack existait. Quand quelqu'un cherchait "snack quartier" sur ChatGPT ou Google — rien.</p>
+          </div>
+
+          <div>
+            <h2 class="font-display font-bold text-xl mb-4 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-amber/10 flex items-center justify-center"><span class="text-amber font-bold text-sm">2</span></div>
+              Ce qu'on a fait
+            </h2>
+            <p class="text-muted leading-relaxed mb-4">Site Agentic Friendly complet, fiche Google Business Profile optimisée, données structurées pour la recherche locale. Menu en ligne, horaires, avis clients — tout ce dont les IA et Google ont besoin pour recommander un commerce local.</p>
+          </div>
+
+          <div>
+            <h2 class="font-display font-bold text-xl mb-4 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-teal/10 flex items-center justify-center"><span class="text-teal font-bold text-sm">3</span></div>
+              Les résultats
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {[
+                { stat: 'Page 1', label: 'Google en 4 mois' },
+                { stat: 'Cité', label: 'par Perplexity en recherche locale' },
+                { stat: '+40%', label: 'de fréquentation' },
+              ].map((r) => (
+                <div class="card-cream p-5 text-center">
+                  <div class="text-2xl font-display font-bold text-gradient mb-1">{r.stat}</div>
+                  <p class="text-xs text-muted">{r.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <div class="card p-6">
+            <h3 class="font-display font-semibold text-lg mb-3">Fiche projet</h3>
+            <dl class="space-y-3 text-sm">
+              <div><dt class="text-muted">Secteur</dt><dd class="font-medium text-navy">Restauration rapide</dd></div>
+              <div><dt class="text-muted">Offre utilisée</dt><dd class="font-medium text-navy">Package complet</dd></div>
+              <div><dt class="text-muted">Durée</dt><dd class="font-medium text-navy">6 mois</dd></div>
+              <div><dt class="text-muted">Livrables</dt><dd class="font-medium text-navy">Site 5 pages + fiche Google + stratégie</dd></div>
+            </dl>
+          </div>
+          <div class="rounded-3xl p-6 text-center" style="background: linear-gradient(135deg, rgba(255,107,74,0.05), rgba(245,158,11,0.05)); border: 1px solid rgba(255,107,74,0.1);">
+            <p class="text-sm text-muted mb-3">Situation similaire ?</p>
+            <a href="/contact" class="btn-primary text-sm !py-2.5 w-full">Demander un audit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

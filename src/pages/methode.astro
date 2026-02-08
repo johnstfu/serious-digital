@@ -1,0 +1,184 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = 'Notre méthode — SeRious | GEO, SEO & Sites Agentic Friendly';
+const description = 'Comment on rend votre entreprise visible sur Google et sur l\'IA. Découvrez notre méthode Agentic Friendly : SEO + GEO + accompagnement sur mesure.';
+---
+
+<Layout title={title} description={description}>
+
+  <!-- Hero -->
+  <section class="section bg-cream">
+    <div class="container-narrow">
+      <div class="max-w-2xl">
+        <p class="overline text-coral mb-4">Notre approche</p>
+        <h1 class="text-hero mb-6">
+          Agentic Friendly,<br><span class="text-gradient">ça veut dire quoi ?</span>
+        </h1>
+        <p class="text-subtitle text-muted">
+          C'est un site conçu pour être trouvé autant par Google que par les intelligences artificielles. Pas juste "joli" — <strong class="text-navy">utile, structuré, et recommandable</strong>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Le changement -->
+  <section class="section">
+    <div class="container-narrow">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="text-section mb-6">Le web d'avant, et celui d'aujourd'hui</h2>
+          <div class="space-y-5 text-muted leading-relaxed text-lg">
+            <p>Avant, la majorité des clients tapaient un mot-clé sur Google et cliquaient sur les premiers résultats.</p>
+            <p>Aujourd'hui, une part croissante de ces recherches passe par des assistants IA. Et ces assistants ne classent pas des liens — ils <strong class="text-navy">recommandent des réponses</strong>.</p>
+            <p>Pour être dans ces réponses, votre site doit parler un langage que ces IA comprennent.</p>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="rounded-3xl p-6 bg-rose/5 border border-rose/10 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-1.5 h-full bg-rose"></div>
+            <div class="pl-5">
+              <div class="flex items-center gap-2 mb-3">
+                <svg class="w-5 h-5 text-rose" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                <h3 class="font-display font-bold text-rose">Site classique</h3>
+              </div>
+              <ul class="space-y-2 text-sm text-rose/70">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-rose/50"></span>Aucune donnée structurée</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-rose/50"></span>Contenu vague, pensé pour "faire beau"</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-rose/50"></span>Ignoré par les IA</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="rounded-3xl p-6 bg-teal/5 border border-teal/10 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-1.5 h-full bg-teal"></div>
+            <div class="pl-5">
+              <div class="flex items-center gap-2 mb-3">
+                <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <h3 class="font-display font-bold text-navy">Site Agentic Friendly</h3>
+              </div>
+              <ul class="space-y-2 text-sm text-muted">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal"></span>Données structurées complètes (JSON-LD)</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal"></span>Cité par ChatGPT, Perplexity, Gemini</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal"></span>SEO + GEO dès le premier jour</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO + GEO -->
+  <section class="section bg-cream" id="geo">
+    <div class="container-narrow">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-section mb-4">SEO + GEO : la combinaison gagnante</h2>
+        <p class="text-lg text-muted">Le SEO vous rend trouvable sur Google. Le GEO vous rend citable par l'IA.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="card p-8">
+          <div class="w-12 h-12 bg-coral/10 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-coral" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-xl mb-3">SEO — les moteurs de recherche</h3>
+          <p class="text-muted text-sm mb-5">Être visible quand quelqu'un tape une recherche sur Google.</p>
+          <ul class="space-y-2.5 text-sm">
+            {['Meta tags optimisés', 'Performance et vitesse', 'Mobile impeccable', 'Fiche Google Business', 'Liens internes structurés'].map((item) => (
+              <li class="flex items-center gap-2.5 text-muted">
+                <svg class="w-4 h-4 text-coral shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="card-highlight p-8">
+          <div class="w-12 h-12 bg-teal/10 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-teal" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-xl mb-3">GEO — les intelligences artificielles</h3>
+          <p class="text-muted text-sm mb-5">Être cité quand quelqu'un pose une question à ChatGPT, Perplexity ou Gemini.</p>
+          <ul class="space-y-2.5 text-sm">
+            {['Données structurées (Schema.org)', 'Contenu factuel et organisé', 'Signaux de crédibilité (E-E-A-T)', 'Informations vérifiables', 'Structure claire pour les crawlers'].map((item) => (
+              <li class="flex items-center gap-2.5 text-muted">
+                <svg class="w-4 h-4 text-teal shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section">
+    <div class="container-narrow">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-section mb-4">Comment se déroule un projet</h2>
+        <p class="text-lg text-muted">Quatre étapes, du premier échange au suivi sur la durée.</p>
+      </div>
+
+      <div class="space-y-6">
+        {[
+          { step: '01', title: 'Premier échange', desc: 'On prend le temps de comprendre votre activité et vos enjeux. Pas de questionnaire — une vraie conversation.', deliverable: 'Un état des lieux clair de votre situation en ligne.', color: '#FF6B4A' },
+          { step: '02', title: 'Construction du site', desc: 'On conçoit et développe votre site en intégrant le SEO et le GEO dès le départ.', deliverable: 'Un site complet, responsive, optimisé pour Google et l\'IA.', color: '#F59E0B' },
+          { step: '03', title: 'Mise en ligne', desc: 'Le site est publié, votre fiche Google est configurée, les outils de suivi sont en place.', deliverable: 'Site en production, fiche Google active, analytics.', color: '#14B8A6' },
+          { step: '04', title: 'Accompagnement', desc: 'On reste avec vous. Ajustements, aide sur les réseaux, contenu, optimisations continues.', deliverable: 'Points réguliers, ajustements continus, accompagnement réseaux.', color: '#2563EB' },
+        ].map((item) => (
+          <div class="card flex flex-col md:flex-row gap-6 md:gap-8 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-1.5 h-full" style={`background-color: ${item.color}`}></div>
+            <div class="shrink-0 pl-4 md:pl-2">
+              <div class="w-14 h-14 rounded-2xl flex items-center justify-center" style={`background-color: ${item.color}15; color: ${item.color}`}>
+                <span class="font-display font-bold text-lg">{item.step}</span>
+              </div>
+            </div>
+            <div class="flex-1 pl-4 md:pl-0">
+              <h3 class="font-display font-bold text-xl mb-3">{item.title}</h3>
+              <p class="text-muted leading-relaxed mb-3">{item.desc}</p>
+              <p class="text-sm"><strong class="text-navy">Ce que vous recevez :</strong> <span class="text-muted">{item.deliverable}</span></p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Pourquoi 6 mois -->
+  <section class="section-dark relative" id="pourquoi-6-mois">
+    <div class="container-narrow relative z-10 text-center">
+      <h2 class="text-section mb-4">Pourquoi 6 mois, et pas moins</h2>
+      <p class="text-lg text-white/50 max-w-2xl mx-auto mb-12">Parce que la visibilité en ligne ne se construit pas en un mois.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+        {[
+          { stat: '3-6 mois', label: 'Délai moyen pour qu\'un nouveau site entre dans le top 10 Google', source: 'Ahrefs' },
+          { stat: '4-8 mois', label: 'Délai pour apparaître dans les réponses des IA', source: 'Recherche interne' },
+          { stat: '+120%', label: 'Hausse moyenne du trafic après 6 mois de travail SEO', source: 'HubSpot' },
+          { stat: '80%', label: 'Des entreprises qui arrêtent avant 6 mois n\'obtiennent aucun résultat', source: 'Search Engine Journal' },
+        ].map((item) => (
+          <div class="card-glass-dark p-6">
+            <div class="text-3xl font-display font-bold text-gradient leading-none mb-3">{item.stat}</div>
+            <p class="text-sm text-white/80 mb-2">{item.label}</p>
+            <p class="text-xs text-white/40">{item.source}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section bg-cream">
+    <div class="container-narrow text-center">
+      <h2 class="text-section mb-5">Cette approche vous parle ?</h2>
+      <p class="text-lg text-muted max-w-xl mx-auto mb-8">On commence toujours par un échange. Vous nous racontez votre situation, on vous dit ce qu'on en pense — franchement.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/contact" class="btn-primary">Demander un audit gratuit</a>
+        <a href="/offres" class="btn-secondary">Voir les formules</a>
+      </div>
+    </div>
+  </section>
+</Layout>

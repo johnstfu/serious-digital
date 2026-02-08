@@ -1,0 +1,90 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = 'FAQ — SeRious | Questions fréquentes sur nos services';
+const description = 'Réponses aux questions fréquentes sur la création de sites Agentic Friendly, le GEO, le SEO et nos offres pour PME.';
+
+const faqs = [
+  {
+    category: 'Nos services',
+    items: [
+      { q: 'C\'est quoi exactement un site "Agentic Friendly" ?', a: 'C\'est un site web conçu pour être trouvé ET recommandé par les intelligences artificielles (ChatGPT, Perplexity, Gemini). Concrètement, ça veut dire des données structurées avancées (JSON-LD), du contenu clair et vérifiable, et des signaux de confiance que les IA savent interpréter. Le tout en plus du SEO classique.' },
+      { q: 'C\'est quoi le GEO ?', a: 'GEO = Generative Engine Optimization. C\'est l\'équivalent du SEO, mais pour les IA. Quand quelqu\'un pose une question à ChatGPT ou Perplexity, le GEO c\'est ce qui fait que votre entreprise apparaît dans la réponse plutôt que celle d\'un concurrent.' },
+      { q: 'Pourquoi 6 mois d\'accompagnement ?', a: 'Parce que les résultats SEO et GEO prennent du temps. Google met 3-6 mois à bien indexer un nouveau site. Les IA mettent 4-8 mois à vous intégrer dans leurs réponses. Un site livré et oublié, ça ne marche pas. On reste avec vous pour ajuster, optimiser, et s\'assurer que ça porte ses fruits.' },
+      { q: 'Combien ça coûte ?', a: 'Notre package complet (site + stratégie digitale + accompagnement 6 mois) est proposé à partir de 1 500€. On fait aussi de la création de site seule ou de la stratégie seule. Chaque projet est différent — on vous fait un devis après l\'audit gratuit.' },
+    ],
+  },
+  {
+    category: 'Fonctionnement',
+    items: [
+      { q: 'Comment se passe l\'audit gratuit ?', a: 'On prend 15 minutes au téléphone ou en visio. On regarde ensemble votre présence actuelle (site, Google, IA), et on vous dit honnêtement ce qui fonctionne et ce qui ne fonctionne pas. Pas de pression commerciale, juste un état des lieux.' },
+      { q: 'Vous travaillez avec quel type d\'entreprise ?', a: 'Des PME, commerçants, artisans, indépendants. En gros, toute entreprise qui a besoin de clients locaux ou nationaux et qui n\'a pas (ou peu) de présence en ligne efficace.' },
+      { q: 'Je peux juste prendre la stratégie digitale sans le site ?', a: 'Oui. Si vous avez déjà un site correct, on peut se concentrer uniquement sur l\'accompagnement : réseaux sociaux, contenu, référencement, optimisation. C\'est notre offre "Stratégie digitale".' },
+      { q: 'Qu\'est-ce qui se passe après les 6 mois ?', a: 'Vous êtes autonome. On vous a formé, votre site est optimisé, vos réseaux sont en place. Si vous voulez continuer à être accompagné, on peut prolonger — mais l\'objectif, c\'est que vous puissiez voler de vos propres ailes.' },
+    ],
+  },
+  {
+    category: 'Technique',
+    items: [
+      { q: 'Vous utilisez quel outil pour créer les sites ?', a: 'On travaille avec Astro (framework moderne et ultra-rapide) et Tailwind CSS. Pas de WordPress, pas de builders. Le résultat : un site performant, sécurisé, et facile à maintenir.' },
+      { q: 'Mon site sera hébergé où ?', a: 'Sur Netlify — un hébergement rapide, sécurisé, avec CDN mondial. L\'hébergement est inclus dans l\'offre (1 an).' },
+      { q: 'C\'est quoi le Schema.org / JSON-LD ?', a: 'C\'est un format de données structurées que Google et les IA utilisent pour comprendre votre site. Par exemple, on dit explicitement aux IA que vous êtes un restaurant, que vous êtes ouvert de 11h à 22h, que vous faites de la cuisine italienne... C\'est ce qui fait la différence entre un site qu\'ils ignorent et un site qu\'ils recommandent.' },
+    ],
+  },
+];
+---
+
+<Layout title={title} description={description}>
+
+  <section class="section bg-cream">
+    <div class="container-narrow">
+      <div class="max-w-2xl">
+        <p class="overline text-coral mb-4">FAQ</p>
+        <h1 class="text-hero mb-6">On répond à <span class="text-gradient">vos questions</span></h1>
+        <p class="text-subtitle text-muted">Tout ce qu'on nous demande le plus souvent. Si votre question n'est pas ici, écrivez-nous.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-narrow max-w-3xl">
+      {faqs.map((section) => (
+        <div class="mb-12 last:mb-0">
+          <h2 class="font-display font-bold text-xl mb-6 flex items-center gap-3">
+            <div class="w-2 h-8 rounded-full bg-coral"></div>
+            {section.category}
+          </h2>
+          <div class="space-y-0">
+            {section.items.map((faq) => (
+              <details class="faq-item group">
+                <summary class="faq-question list-none">
+                  <span>{faq.q}</span>
+                  <svg class="w-5 h-5 text-muted shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="faq-answer">{faq.a}</div>
+              </details>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section bg-cream">
+    <div class="container-narrow text-center">
+      <h2 class="text-section mb-4">Toujours une question ?</h2>
+      <p class="text-lg text-muted max-w-xl mx-auto mb-8">On préfère discuter de vive voix. Prenons 15 minutes.</p>
+      <a href="/contact" class="btn-primary">Nous contacter</a>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.flatMap((s) => s.items.map((faq) => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+    })))
+  })} />
+</Layout>

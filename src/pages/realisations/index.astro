@@ -1,0 +1,75 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = 'Nos réalisations — SeRious | Études de cas par secteur';
+const description = 'Découvrez nos réalisations par secteur : restauration, commerce, artisans. Des cas concrets avec des résultats mesurables.';
+
+const sectors = [
+  {
+    href: '/realisations/restauration',
+    title: 'Restauration',
+    desc: 'Snacks, boulangeries, restaurants. On les rend trouvables quand quelqu\'un cherche où manger.',
+    gradient: 'linear-gradient(135deg, #FF6B4A 0%, #F59E0B 100%)',
+    cases: 'Un snack invisible qui devient recommandé par les IA',
+  },
+  {
+    href: '/realisations/commerce',
+    title: 'Commerce',
+    desc: 'Boutiques, magasins, e-commerce. Visibilité locale et nationale combinées.',
+    gradient: 'linear-gradient(135deg, #14B8A6 0%, #2563EB 100%)',
+    cases: 'Doubler sa visibilité en croisant SEO et IA',
+  },
+  {
+    href: '/realisations/artisans',
+    title: 'Artisans & Services',
+    desc: 'Coiffeurs, plombiers, consultants. L\'IA recommande ceux qui ont un site structuré.',
+    gradient: 'linear-gradient(135deg, #F59E0B 0%, #E11D48 100%)',
+    cases: 'D\'un site Wix oublié à une vitrine qui remplit l\'agenda',
+  },
+];
+---
+
+<Layout title={title} description={description}>
+
+  <section class="section bg-cream">
+    <div class="container-narrow">
+      <div class="max-w-2xl">
+        <p class="overline text-coral mb-4">Nos réalisations</p>
+        <h1 class="text-hero mb-6">Des résultats,<br><span class="text-gradient">secteur par secteur</span></h1>
+        <p class="text-subtitle text-muted">Chaque business est différent. Voici comment notre méthode s'adapte à chaque secteur.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-narrow">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {sectors.map((sector) => (
+          <a href={sector.href} class="group">
+            <div class="card hover:-translate-y-2 transition-all duration-500 h-full flex flex-col">
+              <div class="h-2 rounded-t-3xl -mt-6 md:-mt-8 -mx-6 md:-mx-8 mb-6" style={`background: ${sector.gradient}`}></div>
+              <h2 class="font-display font-bold text-2xl mb-3 group-hover:text-coral transition-colors">{sector.title}</h2>
+              <p class="text-muted leading-relaxed mb-6 flex-1">{sector.desc}</p>
+              <div class="pt-4 border-t border-warm-200">
+                <p class="text-xs font-semibold uppercase tracking-wider text-muted mb-2">Étude de cas</p>
+                <p class="text-sm font-medium text-navy">{sector.cases}</p>
+              </div>
+              <div class="flex items-center gap-2 text-coral font-semibold text-sm mt-4 group-hover:underline">
+                Voir les détails
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-cream">
+    <div class="container-narrow text-center">
+      <h2 class="text-section mb-4">Votre secteur n'est pas listé ?</h2>
+      <p class="text-lg text-muted max-w-xl mx-auto mb-8">Notre méthode s'adapte à tous les métiers. Parlons de votre situation.</p>
+      <a href="/contact" class="btn-primary">Demander un audit gratuit</a>
+    </div>
+  </section>
+</Layout>

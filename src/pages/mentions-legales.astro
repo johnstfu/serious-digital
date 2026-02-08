@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = 'Mentions légales — SeRious';
+const description = 'Mentions légales du site serious-digital.fr.';
+---
+
+<Layout title={title} description={description}>
+
+  <section class="section bg-cream">
+    <div class="container-narrow">
+      <h1 class="text-hero mb-6">Mentions légales</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-narrow max-w-3xl prose prose-lg">
+
+      <h2 class="font-display font-bold text-xl mb-4">Éditeur du site</h2>
+      <div class="card p-6 mb-8 not-prose">
+        <dl class="space-y-2 text-sm">
+          <div class="flex gap-2"><dt class="text-muted min-w-[140px]">Raison sociale</dt><dd class="font-medium text-navy">SeRious</dd></div>
+          <div class="flex gap-2"><dt class="text-muted min-w-[140px]">Forme juridique</dt><dd class="font-medium text-navy">En cours d'immatriculation</dd></div>
+          <div class="flex gap-2"><dt class="text-muted min-w-[140px]">Responsables</dt><dd class="font-medium text-navy">Rayane Kryslak, Scott R.</dd></div>
+          <div class="flex gap-2"><dt class="text-muted min-w-[140px]">Email</dt><dd class="font-medium text-navy">contact@serious-digital.fr</dd></div>
+          <div class="flex gap-2"><dt class="text-muted min-w-[140px]">Site web</dt><dd class="font-medium text-navy">https://serious-digital.fr</dd></div>
+        </dl>
+      </div>
+
+      <h2 class="font-display font-bold text-xl mb-4">Hébergement</h2>
+      <div class="card p-6 mb-8 not-prose">
+        <dl class="space-y-2 text-sm">
+          <div class="flex gap-2"><dt class="text-muted min-w-[140px]">Hébergeur</dt><dd class="font-medium text-navy">Netlify, Inc.</dd></div>
+          <div class="flex gap-2"><dt class="text-muted min-w-[140px]">Adresse</dt><dd class="font-medium text-navy">512 2nd Street, Suite 200, San Francisco, CA 94107, USA</dd></div>
+          <div class="flex gap-2"><dt class="text-muted min-w-[140px]">Site web</dt><dd class="font-medium text-navy">https://www.netlify.com</dd></div>
+        </dl>
+      </div>
+
+      <h2 class="font-display font-bold text-xl mb-4">Propriété intellectuelle</h2>
+      <p class="text-muted leading-relaxed mb-8">
+        L'ensemble du contenu de ce site (textes, images, vidéos, éléments graphiques, code source) est la propriété exclusive de SeRious, sauf mention contraire. Toute reproduction, représentation, modification, distribution ou rediffusion, même partielle, est interdite sans autorisation préalable.
+      </p>
+
+      <h2 class="font-display font-bold text-xl mb-4">Données personnelles</h2>
+      <p class="text-muted leading-relaxed mb-4">
+        Les informations collectées via le formulaire de contact sont utilisées uniquement dans le cadre de votre demande. Elles ne sont jamais transmises à des tiers ni utilisées à des fins commerciales non sollicitées.
+      </p>
+      <p class="text-muted leading-relaxed mb-8">
+        Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour exercer ces droits, contactez-nous à <a href="mailto:contact@serious-digital.fr" class="text-coral hover:underline">contact@serious-digital.fr</a>.
+      </p>
+
+      <h2 class="font-display font-bold text-xl mb-4">Cookies</h2>
+      <p class="text-muted leading-relaxed">
+        Ce site n'utilise pas de cookies de tracking ou de publicité. Aucune donnée de navigation n'est collectée.
+      </p>
+
+    </div>
+  </section>
+</Layout>

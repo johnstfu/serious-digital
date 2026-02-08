@@ -1,0 +1,131 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = 'Contact & Audit gratuit — SeRious | Demandez votre audit de visibilité';
+const description = 'Demandez votre audit de visibilité gratuit. On analyse votre présence sur Google et sur l\'IA et on vous dit ce qu\'on peut faire pour vous.';
+---
+
+<Layout title={title} description={description}>
+
+  <section class="section bg-cream">
+    <div class="container-narrow">
+      <div class="max-w-2xl">
+        <div class="badge-teal mb-4">Gratuit & sans engagement</div>
+        <h1 class="text-hero mb-6">Parlons de <span class="text-gradient">votre projet</span></h1>
+        <p class="text-subtitle text-muted">Remplissez le formulaire, on revient vers vous sous 24h. L'audit est gratuit : on regarde votre situation en ligne et on vous dit honnêtement ce qu'on peut améliorer.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-narrow">
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
+        <div class="lg:col-span-3">
+          <div class="card p-8">
+            <h2 class="font-display font-bold text-2xl mb-2">Votre demande</h2>
+            <p class="text-muted text-sm mb-6">Quelques infos pour qu'on puisse vous répondre de manière utile.</p>
+
+            <form action="https://formsubmit.co/contact@serious-digital.fr" method="POST" class="space-y-5">
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_subject" value="Nouvelle demande — SeRious" />
+              <input type="hidden" name="_next" value="https://serious-digital.fr/contact?success=true" />
+              <input type="text" name="_honey" style="display:none" />
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div>
+                  <label for="name" class="block text-sm font-medium text-navy mb-1.5">Votre nom *</label>
+                  <input type="text" id="name" name="name" required placeholder="Jean Dupont"
+                    class="w-full px-4 py-3 rounded-xl border border-warm-200 bg-white text-navy placeholder:text-muted-light focus:outline-none focus:ring-2 focus:ring-coral/30 focus:border-coral transition-all" />
+                </div>
+                <div>
+                  <label for="business" class="block text-sm font-medium text-navy mb-1.5">Votre entreprise *</label>
+                  <input type="text" id="business" name="business" required placeholder="Nom de l'entreprise"
+                    class="w-full px-4 py-3 rounded-xl border border-warm-200 bg-white text-navy placeholder:text-muted-light focus:outline-none focus:ring-2 focus:ring-coral/30 focus:border-coral transition-all" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div>
+                  <label for="email" class="block text-sm font-medium text-navy mb-1.5">Email *</label>
+                  <input type="email" id="email" name="email" required placeholder="jean@monentreprise.fr"
+                    class="w-full px-4 py-3 rounded-xl border border-warm-200 bg-white text-navy placeholder:text-muted-light focus:outline-none focus:ring-2 focus:ring-coral/30 focus:border-coral transition-all" />
+                </div>
+                <div>
+                  <label for="phone" class="block text-sm font-medium text-navy mb-1.5">Téléphone</label>
+                  <input type="tel" id="phone" name="phone" placeholder="06 12 34 56 78"
+                    class="w-full px-4 py-3 rounded-xl border border-warm-200 bg-white text-navy placeholder:text-muted-light focus:outline-none focus:ring-2 focus:ring-coral/30 focus:border-coral transition-all" />
+                </div>
+              </div>
+
+              <div>
+                <label for="sector" class="block text-sm font-medium text-navy mb-1.5">Secteur d'activité *</label>
+                <select id="sector" name="sector" required
+                  class="w-full px-4 py-3 rounded-xl border border-warm-200 bg-white text-navy focus:outline-none focus:ring-2 focus:ring-coral/30 focus:border-coral transition-all">
+                  <option value="">Choisissez...</option>
+                  <option value="restauration">Restauration / Snack / Boulangerie</option>
+                  <option value="coiffure-beaute">Coiffure / Beauté / Bien-être</option>
+                  <option value="commerce">Commerce / Boutique</option>
+                  <option value="artisan">Artisan / BTP</option>
+                  <option value="services">Services / Conseil</option>
+                  <option value="sante">Santé / Paramédical</option>
+                  <option value="autre">Autre</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="need" class="block text-sm font-medium text-navy mb-1.5">Ce qui vous intéresse</label>
+                <select id="need" name="need"
+                  class="w-full px-4 py-3 rounded-xl border border-warm-200 bg-white text-navy focus:outline-none focus:ring-2 focus:ring-coral/30 focus:border-coral transition-all">
+                  <option value="">Choisissez...</option>
+                  <option value="creation">Création de site</option>
+                  <option value="refonte">Refonte de site</option>
+                  <option value="strategie">Accompagnement digital</option>
+                  <option value="package">Le package complet</option>
+                  <option value="audit">Juste un audit pour commencer</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="message" class="block text-sm font-medium text-navy mb-1.5">Un mot de plus ? (optionnel)</label>
+                <textarea id="message" name="message" rows="3" placeholder="Racontez-nous votre situation..."
+                  class="w-full px-4 py-3 rounded-xl border border-warm-200 bg-white text-navy placeholder:text-muted-light resize-y focus:outline-none focus:ring-2 focus:ring-coral/30 focus:border-coral transition-all"></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary w-full">
+                Envoyer
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </button>
+
+              <p class="text-xs text-muted text-center">Vos données restent entre nous. On ne partage rien, jamais.</p>
+            </form>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2 space-y-6">
+          <div class="card p-6">
+            <h3 class="font-display font-semibold text-lg mb-4">Ce qu'on regarde dans l'audit</h3>
+            <ul class="space-y-3">
+              {['Votre site actuel (ou son absence)', 'Votre visibilité sur ChatGPT, Perplexity, Gemini', 'Votre positionnement Google', 'Des recommandations concrètes', '15 min d\'échange pour en discuter'].map((item) => (
+                <li class="flex items-start gap-2.5 text-sm">
+                  <svg class="w-4 h-4 text-teal shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  <span class="text-muted">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="card-dark p-6">
+            <h3 class="font-display font-semibold text-lg mb-4">Contact direct</h3>
+            <a href="mailto:contact@serious-digital.fr" class="flex items-center gap-3 text-warm-200 hover:text-coral transition-colors text-sm">
+              <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+              contact@serious-digital.fr
+            </a>
+            <div class="mt-6 pt-4 border-t border-white/10">
+              <p class="text-muted-light text-xs">On répond en <strong class="text-white">moins de 24h</strong>. Promis.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

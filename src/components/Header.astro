@@ -1,0 +1,162 @@
+---
+const navLinks = [
+  {
+    href: '/offres',
+    label: 'Nos offres',
+    children: [
+      { href: '/offres/creation-site', label: 'Création de site' },
+      { href: '/offres/refonte-site', label: 'Refonte de site' },
+      { href: '/offres/strategie-digitale', label: 'Stratégie digitale' },
+      { href: '/offres/package-complet', label: 'Package complet' },
+    ],
+  },
+  {
+    href: '/realisations',
+    label: 'Réalisations',
+    children: [
+      { href: '/realisations/restauration', label: 'Restauration' },
+      { href: '/realisations/commerce', label: 'Commerce' },
+      { href: '/realisations/artisans', label: 'Artisans & Services' },
+    ],
+  },
+  { href: '/methode', label: 'Notre méthode' },
+  {
+    href: '/faq',
+    label: 'Ressources',
+    children: [
+      { href: '/faq', label: 'FAQ' },
+      { href: '/blog', label: 'Blog' },
+    ],
+  },
+  { href: '/a-propos', label: 'À propos' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-warm-200/60">
+  <nav class="container-wide mx-auto px-4 md:px-6 h-16 flex items-center justify-between" aria-label="Navigation principale">
+    
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2 group" aria-label="SeRious — Accueil">
+      <div class="w-8 h-8 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform" style="background: linear-gradient(135deg, #FF6B4A 0%, #E85A3A 100%);">
+        <span class="text-white font-display font-bold text-sm">S</span>
+      </div>
+      <span class="font-display font-bold text-xl text-navy">
+        Se<span class="text-gradient">Rious</span>
+      </span>
+    </a>
+
+    <!-- Desktop nav -->
+    <div class="hidden lg:flex items-center gap-0.5">
+      {navLinks.map((link) => (
+        <div class={`relative ${link.children ? 'group' : ''}`}>
+          <a
+            href={link.href}
+            class={`btn-ghost text-sm flex items-center gap-1 ${
+              currentPath.startsWith(link.href) ? 'text-coral bg-coral/5' : ''
+            }`}
+          >
+            {link.label}
+            {link.children && (
+              <svg class="w-3.5 h-3.5 opacity-50 group-hover:opacity-100 transition-all group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            )}
+          </a>
+          {link.children && (
+            <div class="dropdown-menu">
+              <div class="dropdown-content">
+                {link.children.map((child) => (
+                  <a
+                    href={child.href}
+                    class={currentPath === child.href ? 'dropdown-item-active' : 'dropdown-item'}
+                  >
+                    {child.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      ))}
+      <div class="w-px h-6 bg-warm-200 mx-2"></div>
+      <a href="/contact" class="btn-primary text-sm !px-5 !py-2.5">
+        Audit gratuit
+      </a>
+    </div>
+
+    <!-- Mobile menu button -->
+    <button
+      id="mobile-menu-btn"
+      class="lg:hidden p-2 rounded-lg hover:bg-warm-100 transition-colors"
+      aria-label="Ouvrir le menu"
+      aria-expanded="false"
+    >
+      <svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-warm-200 max-h-[80vh] overflow-y-auto">
+    <div class="px-4 py-4 space-y-1">
+      {navLinks.map((link) => (
+        <div>
+          <a
+            href={link.href}
+            class={`block px-4 py-3 rounded-lg font-medium transition-colors ${
+              currentPath.startsWith(link.href)
+                ? 'text-coral bg-coral/5'
+                : 'text-navy hover:bg-warm-100'
+            }`}
+          >
+            {link.label}
+          </a>
+          {link.children && (
+            <div class="pl-6 space-y-0.5 mt-1">
+              {link.children.map((child) => (
+                <a
+                  href={child.href}
+                  class={`block px-4 py-2 rounded-lg text-sm transition-colors ${
+                    currentPath === child.href
+                      ? 'text-coral bg-coral/5'
+                      : 'text-muted hover:text-navy hover:bg-warm-100'
+                  }`}
+                >
+                  {child.label}
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+      <div class="pt-3">
+        <a href="/contact" class="btn-primary w-full text-center text-sm">
+          Audit gratuit
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="h-16"></div>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const icon = document.getElementById('menu-icon');
+
+  if (btn && menu && icon) {
+    btn.addEventListener('click', () => {
+      const isOpen = !menu.classList.contains('hidden');
+      menu.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', String(!isOpen));
+      icon.setAttribute('d', isOpen
+        ? 'M4 6h16M4 12h16M4 18h16'
+        : 'M6 18L18 6M6 6l12 12'
+      );
+    });
+  }
+</script>

@@ -1,0 +1,82 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = 'Création de site web — SeRious | Site Agentic Friendly pour PME';
+const description = 'Création de site web optimisé SEO et GEO pour PME. Design sur mesure, hébergement inclus, Google Business Profile configuré.';
+---
+
+<Layout title={title} description={description}>
+
+  <section class="section bg-cream">
+    <div class="container-narrow">
+      <div class="max-w-2xl">
+        <a href="/offres" class="inline-flex items-center gap-1.5 text-sm text-muted hover:text-coral transition-colors mb-6">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Retour aux offres
+        </a>
+        <div class="badge-coral mb-4">Création de site</div>
+        <h1 class="text-hero mb-6">Votre vitrine en ligne,<br><span class="text-gradient">conçue pour performer</span></h1>
+        <p class="text-subtitle text-muted">Vous n'avez pas de site, ou celui que vous avez ne vous représente plus. On construit votre présence en ligne de A à Z — design, contenu, technique. Tout est pensé dès le premier jour pour Google et l'IA.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-narrow">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="text-section mb-6">Ce qui est inclus</h2>
+          <ul class="space-y-4 mb-8">
+            {[
+              { title: 'Design sur mesure', desc: 'Responsive, moderne, à votre image. Jamais de template générique.' },
+              { title: 'Jusqu\'à 5 pages', desc: 'Accueil, services, à propos, contact... Tout ce qu\'il vous faut.' },
+              { title: 'SEO technique complet', desc: 'Meta tags, sitemap, robots.txt, performance optimisée.' },
+              { title: 'Optimisation GEO', desc: 'Schema markup JSON-LD pour être cité par les IA.' },
+              { title: 'Google Business Profile', desc: 'Fiche Google configurée et optimisée pour la recherche locale.' },
+              { title: 'Hébergement inclus (1 an)', desc: 'Hébergement rapide et sécurisé, on s\'occupe de tout.' },
+            ].map((item) => (
+              <li class="flex items-start gap-4">
+                <div class="w-6 h-6 rounded-full bg-teal/10 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5 text-teal" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </div>
+                <div>
+                  <p class="font-display font-semibold text-navy">{item.title}</p>
+                  <p class="text-sm text-muted">{item.desc}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+          <a href="/contact" class="btn-primary">Demander un audit gratuit</a>
+        </div>
+
+        <div class="space-y-6">
+          <div class="card-cream p-8">
+            <h3 class="font-display font-semibold text-lg mb-5">Idéal si vous...</h3>
+            <ul class="space-y-4">
+              {[
+                'N\'avez pas encore de site web',
+                'Avez un site vieux ou non responsive',
+                'N\'apparaissez pas sur Google',
+                'Êtes invisible pour ChatGPT et Perplexity',
+              ].map((item) => (
+                <li class="flex items-center gap-3 bg-white p-3 rounded-xl border border-warm-200">
+                  <div class="w-8 h-8 rounded-lg bg-coral/10 flex items-center justify-center shrink-0">
+                    <svg class="w-4 h-4 text-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                  </div>
+                  <span class="text-sm font-medium text-navy">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="card p-6 border-coral/20">
+            <p class="text-sm text-muted mb-2">Envie du package complet ?</p>
+            <a href="/offres/package-complet" class="text-coral font-semibold text-sm hover:underline">
+              Voir le Package complet (site + stratégie) &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

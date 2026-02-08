@@ -1,0 +1,114 @@
+---
+const year = new Date().getFullYear();
+
+const footerLinks = {
+  offres: [
+    { href: '/offres/creation-site', label: 'Création de site' },
+    { href: '/offres/refonte-site', label: 'Refonte de site' },
+    { href: '/offres/strategie-digitale', label: 'Stratégie digitale' },
+    { href: '/offres/package-complet', label: 'Package complet' },
+  ],
+  realisations: [
+    { href: '/realisations/restauration', label: 'Restauration' },
+    { href: '/realisations/commerce', label: 'Commerce' },
+    { href: '/realisations/artisans', label: 'Artisans & Services' },
+  ],
+  ressources: [
+    { href: '/methode', label: 'Notre méthode' },
+    { href: '/faq', label: 'Questions fréquentes' },
+    { href: '/blog', label: 'Blog' },
+    { href: '/a-propos', label: 'À propos' },
+  ],
+};
+---
+
+<footer class="bg-navy text-white" role="contentinfo">
+  <div class="container-narrow mx-auto px-4 md:px-6">
+    
+    <div class="py-16 grid grid-cols-2 md:grid-cols-5 gap-10 md:gap-8">
+      
+      <!-- Brand -->
+      <div class="col-span-2 md:col-span-1">
+        <a href="/" class="flex items-center gap-2 mb-4">
+          <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background: linear-gradient(135deg, #FF6B4A 0%, #E85A3A 100%);">
+            <span class="text-white font-display font-bold text-sm">S</span>
+          </div>
+          <span class="font-display font-bold text-xl">
+            Se<span class="text-coral-light">Rious</span>
+          </span>
+        </a>
+        <p class="text-muted-light text-sm leading-relaxed">
+          Votre entreprise visible sur Google <strong class="text-white">ET</strong> sur l'IA.
+        </p>
+      </div>
+
+      <!-- Offres -->
+      <div>
+        <h3 class="font-display font-semibold text-sm uppercase tracking-wider text-muted-light mb-4">Offres</h3>
+        <ul class="space-y-2.5">
+          {footerLinks.offres.map((link) => (
+            <li>
+              <a href={link.href} class="text-sm text-warm-200 hover:text-coral transition-colors">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Réalisations -->
+      <div>
+        <h3 class="font-display font-semibold text-sm uppercase tracking-wider text-muted-light mb-4">Réalisations</h3>
+        <ul class="space-y-2.5">
+          {footerLinks.realisations.map((link) => (
+            <li>
+              <a href={link.href} class="text-sm text-warm-200 hover:text-coral transition-colors">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Ressources -->
+      <div>
+        <h3 class="font-display font-semibold text-sm uppercase tracking-wider text-muted-light mb-4">Ressources</h3>
+        <ul class="space-y-2.5">
+          {footerLinks.ressources.map((link) => (
+            <li>
+              <a href={link.href} class="text-sm text-warm-200 hover:text-coral transition-colors">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="font-display font-semibold text-sm uppercase tracking-wider text-muted-light mb-4">Contact</h3>
+        <div class="space-y-3 text-sm">
+          <a href="mailto:contact@serious-digital.fr" class="flex items-center gap-2 text-warm-200 hover:text-coral transition-colors">
+            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            contact@serious-digital.fr
+          </a>
+          <a href="/contact" class="btn-primary text-sm !px-5 !py-2 mt-4 w-full text-center">
+            Audit gratuit
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-white/10 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-light">
+      <p>&copy; {year} SeRious. Tous droits réservés.</p>
+      <div class="flex items-center gap-4">
+        <a href="/mentions-legales" class="hover:text-white transition-colors">Mentions légales</a>
+        <span class="text-white/20">|</span>
+        <p>Site conçu avec la méthodologie <span class="text-coral font-medium">Agentic Friendly</span></p>
+      </div>
+    </div>
+  </div>
+</footer>
