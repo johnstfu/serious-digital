@@ -376,6 +376,106 @@
   }
 }
 
+/* ===========================
+   CARDS STEP — Méthode 3 étapes
+   =========================== */
+  .card-step {
+    @apply relative bg-white rounded-3xl p-8
+           border border-warm-200
+           shadow-card
+           transition-all duration-500 ease-out;
+  }
+  .card-step:hover {
+    @apply -translate-y-2;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+  }
+
+  .card-step-highlight {
+    @apply relative;
+    background: linear-gradient(180deg, #FFFBF5 0%, #FFFFFF 100%);
+    border-color: rgba(255,107,74,0.2);
+  }
+  .card-step-highlight::before {
+    content: '';
+    @apply absolute top-0 left-0 right-0 h-1 rounded-t-3xl;
+    background: linear-gradient(135deg, #FF6B4A 0%, #F59E0B 100%);
+  }
+
+  .step-number {
+    @apply absolute top-6 right-6 w-10 h-10 rounded-full
+           flex items-center justify-center
+           text-lg font-display font-bold
+           bg-warm-100 text-muted;
+  }
+
+  /* ===========================
+   CARDS FORMULE — Offres
+   =========================== */
+  .card-formule {
+    @apply relative bg-white rounded-3xl p-6
+           border border-warm-200
+           shadow-card
+           transition-all duration-500 ease-out;
+  }
+  .card-formule:hover {
+    @apply -translate-y-2;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+  }
+
+  .card-formule-highlight {
+    @apply relative;
+    border-color: rgba(255,107,74,0.3);
+    box-shadow: 0 0 40px rgba(255,107,74,0.1);
+  }
+  .card-formule-highlight::before {
+    content: '';
+    @apply absolute top-0 left-0 right-0 h-1 rounded-t-3xl;
+    background: linear-gradient(135deg, #FF6B4A 0%, #F59E0B 100%);
+  }
+
+  /* ===========================
+     OFFER ACCORDION — Section Offres
+     =========================== */
+  .offer-accordion {
+    @apply bg-white rounded-2xl border border-warm-200 overflow-hidden
+           transition-all duration-300 ease-out;
+  }
+  .offer-accordion:hover {
+    @apply border-warm-300;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  .offer-accordion[open] {
+    @apply border-warm-300;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  }
+
+  .offer-accordion-highlight {
+    @apply border-coral/30 relative;
+    background: linear-gradient(180deg, #FFFBF5 0%, #FFFFFF 100%);
+  }
+  .offer-accordion-highlight::before {
+    content: '';
+    @apply absolute top-0 left-0 right-0 h-1;
+    background: linear-gradient(135deg, #FF6B4A 0%, #F59E0B 100%);
+  }
+  .offer-accordion-highlight:hover,
+  .offer-accordion-highlight[open] {
+    @apply border-coral/40;
+    box-shadow: 0 8px 32px rgba(255,107,74,0.12);
+  }
+
+  .offer-accordion-header {
+    @apply flex items-center gap-4 p-6 cursor-pointer
+           transition-colors;
+  }
+  .offer-accordion-header:hover {
+    background-color: rgba(245, 241, 235, 0.5);
+  }
+
+  .offer-accordion-content {
+    @apply px-6 pb-6 text-muted;
+  }
+
 @layer utilities {
   .animate-delay-100 { animation-delay: 100ms; }
   .animate-delay-200 { animation-delay: 200ms; }
