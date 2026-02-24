@@ -25,9 +25,9 @@ const description = 'Demandez votre audit de visibilité gratuit. J\'analyse vot
             <h2 class="font-display font-bold text-2xl mb-2">Votre demande</h2>
             <p class="text-muted text-sm mb-6">Quelques infos pour que je puisse vous répondre de manière utile.</p>
 
-            <form action="https://formsubmit.co/contact@serious-digital.fr" method="POST" class="space-y-5">
+            <form action="https://formsubmit.co/rayane.kryslak@hotmail.fr" method="POST" class="space-y-5">
               <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_subject" value="Nouvelle demande — SeRious" />
+              <input type="hidden" name="_subject" value="Nouvelle demande audit — SeRious" />
               <input type="hidden" name="_next" value="https://serious-digital.fr/contact?success=true" />
               <input type="text" name="_honey" style="display:none" />
 
@@ -75,13 +75,21 @@ const description = 'Demandez votre audit de visibilité gratuit. J\'analyse vot
               <div>
                 <label for="need" class="block text-sm font-medium text-navy mb-1.5">Ce qui vous intéresse</label>
                 <select id="need" name="need"
-                  class="w-full px-4 py-3 rounded-xl border border-warm-200 bg-white text-navy focus:outline-none focus:ring-2 focus:ring-coral/30 focus:border-coral transition-all">
+                  class="w-full px-4 py-3 rounded-xl border border-warm-200 bg-white text-navy focus:outline-none focus:ring-2 focus:ring-coral/30 focus:border-coral transition-all"
+                  onchange="toggleUrlField(this.value)">
                   <option value="">Choisissez...</option>
                   <option value="creation">Création de site</option>
                   <option value="refonte">Refonte de site</option>
                   <option value="social-listening">Social Listening (analyse d'avis)</option>
                   <option value="audit">Juste un audit pour commencer</option>
                 </select>
+              </div>
+
+              <div id="url-field" class="hidden">
+                <label for="website" class="block text-sm font-medium text-navy mb-1.5">URL de votre site actuel</label>
+                <input type="url" id="website" name="website" placeholder="https://monsite.fr"
+                  class="w-full px-4 py-3 rounded-xl border border-warm-200 bg-white text-navy placeholder:text-muted-light focus:outline-none focus:ring-2 focus:ring-coral/30 focus:border-coral transition-all" />
+                <p class="text-xs text-muted mt-1">Je l'analyserai avant notre échange.</p>
               </div>
 
               <div>
@@ -115,9 +123,9 @@ const description = 'Demandez votre audit de visibilité gratuit. J\'analyse vot
 
           <div class="card-dark p-6">
             <h3 class="font-display font-semibold text-lg mb-4">Contact direct</h3>
-            <a href="mailto:contact@serious-digital.fr" class="flex items-center gap-3 text-warm-200 hover:text-coral transition-colors text-sm">
+            <a href="mailto:rayane.kryslak@hotmail.fr" class="flex items-center gap-3 text-warm-200 hover:text-coral transition-colors text-sm">
               <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-              contact@serious-digital.fr
+              rayane.kryslak@hotmail.fr
             </a>
             <div class="mt-6 pt-4 border-t border-white/10">
               <p class="text-muted-light text-xs">Je réponds en <strong class="text-white">moins de 24h</strong>. Promis.</p>
@@ -127,4 +135,12 @@ const description = 'Demandez votre audit de visibilité gratuit. J\'analyse vot
       </div>
     </div>
   </section>
+
+<script>
+  function toggleUrlField(value) {
+    const urlField = document.getElementById('url-field');
+    const showFor = ['refonte', 'social-listening', 'audit'];
+    urlField.classList.toggle('hidden', !showFor.includes(value));
+  }
+</script>
 </Layout>
