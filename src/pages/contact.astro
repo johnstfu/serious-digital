@@ -76,7 +76,7 @@ const description = 'Demandez votre audit de visibilité gratuit. J\'analyse vot
                 <label for="need" class="block text-sm font-medium text-navy mb-1.5">Ce qui vous intéresse</label>
                 <select id="need" name="need"
                   class="w-full px-4 py-3 rounded-xl border border-warm-200 bg-white text-navy focus:outline-none focus:ring-2 focus:ring-coral/30 focus:border-coral transition-all"
-                  onchange="toggleUrlField(this.value)">
+>
                   <option value="">Choisissez...</option>
                   <option value="creation">Création de site</option>
                   <option value="refonte">Refonte de site</option>
@@ -85,8 +85,8 @@ const description = 'Demandez votre audit de visibilité gratuit. J\'analyse vot
                 </select>
               </div>
 
-              <div id="url-field" class="hidden">
-                <label for="website" class="block text-sm font-medium text-navy mb-1.5">URL de votre site actuel</label>
+              <div>
+                <label for="website" class="block text-sm font-medium text-navy mb-1.5">URL de votre site actuel <span class="text-muted font-normal">(si vous en avez un)</span></label>
                 <input type="url" id="website" name="website" placeholder="https://monsite.fr"
                   class="w-full px-4 py-3 rounded-xl border border-warm-200 bg-white text-navy placeholder:text-muted-light focus:outline-none focus:ring-2 focus:ring-coral/30 focus:border-coral transition-all" />
                 <p class="text-xs text-muted mt-1">Je l'analyserai avant notre échange.</p>
@@ -136,11 +136,4 @@ const description = 'Demandez votre audit de visibilité gratuit. J\'analyse vot
     </div>
   </section>
 
-<script>
-  function toggleUrlField(value) {
-    const urlField = document.getElementById('url-field');
-    const showFor = ['refonte', 'social-listening', 'audit'];
-    urlField.classList.toggle('hidden', !showFor.includes(value));
-  }
-</script>
 </Layout>
