@@ -1,29 +1,35 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
-const title = 'Blog — SeRious | Ressources SEO, GEO & stratégie digitale';
+const title = 'Blog & Ressources';
 const description = 'Articles et ressources sur le SEO, le GEO, la stratégie digitale et l\'optimisation pour l\'IA. Conseils pratiques pour PME.';
 
 const articles = [
   {
+    slug: 'geo-optimisation-ia',
     title: 'Qu\'est-ce que le GEO et pourquoi ça va tout changer',
     excerpt: 'Le Generative Engine Optimization, c\'est le SEO de demain. On vous explique ce que c\'est, pourquoi c\'est important, et comment s\'y préparer.',
     tag: 'GEO',
-    date: 'Bientôt',
+    date: '15 Février 2026',
+    readTime: '5 min',
     color: 'bg-coral/10 text-coral border-coral/20',
   },
   {
+    slug: 'erreurs-seo-pme',
     title: '5 erreurs SEO que font 90% des PME',
     excerpt: 'Des erreurs basiques qui vous coûtent des clients tous les jours. Et comment les corriger rapidement.',
     tag: 'SEO',
-    date: 'Bientôt',
+    date: '12 Février 2026',
+    readTime: '6 min',
     color: 'bg-teal/10 text-teal border-teal/20',
   },
   {
-    title: 'ChatGPT recommande vos concurrents — comment inverser la tendance',
+    slug: 'chatgpt-recommande-concurrents',
+    title: 'ChatGPT recommande vos concurrents : comment inverser la tendance',
     excerpt: 'Pourquoi les IA recommandent certaines entreprises et pas d\'autres. Ce que vous pouvez faire concrètement.',
     tag: 'IA',
-    date: 'Bientôt',
+    date: '10 Février 2026',
+    readTime: '7 min',
     color: 'bg-amber/10 text-amber border-amber/20',
   },
 ];
@@ -45,21 +51,22 @@ const articles = [
     <div class="container-narrow">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         {articles.map((article) => (
-          <div class="card relative">
+          <a href={`/blog/${article.slug}`} class="card relative group hover:shadow-lg transition-shadow">
             <div class="absolute top-4 right-4">
-              <span class="text-[10px] uppercase tracking-wider text-muted bg-warm-100 px-2 py-0.5 rounded-full border border-warm-200">{article.date}</span>
+              <span class="text-[10px] uppercase tracking-wider text-muted bg-warm-100 px-2 py-0.5 rounded-full border border-warm-200">{article.readTime}</span>
             </div>
             <span class={`inline-flex items-center text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full border mb-4 ${article.color}`}>{article.tag}</span>
-            <h2 class="font-display font-bold text-lg mb-3 leading-snug">{article.title}</h2>
-            <p class="text-muted text-sm leading-relaxed">{article.excerpt}</p>
-          </div>
+            <h2 class="font-display font-bold text-lg mb-3 leading-snug group-hover:text-coral transition-colors">{article.title}</h2>
+            <p class="text-muted text-sm leading-relaxed mb-4">{article.excerpt}</p>
+            <p class="text-xs text-muted">{article.date}</p>
+          </a>
         ))}
       </div>
 
       <div class="text-center mt-16 p-12 rounded-3xl bg-cream border border-cream-200">
-        <p class="font-display font-bold text-xl mb-3">Les articles arrivent bientôt</p>
-        <p class="text-muted mb-6">On prépare du contenu utile et actionnable. En attendant, on peut en discuter directement.</p>
-        <a href="/contact" class="btn-primary">Nous contacter</a>
+        <p class="font-display font-bold text-xl mb-3">Une question ? Un sujet à creuser ?</p>
+        <p class="text-muted mb-6">Je peux vous expliquer n'importe quel sujet de cet article de manière personnalisée.</p>
+        <a href="/contact" class="btn-primary">Me contacter</a>
       </div>
     </div>
   </section>

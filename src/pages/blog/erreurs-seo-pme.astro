@@ -1,0 +1,196 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = '5 erreurs SEO que font 90% des PME';
+const description = 'Découvrez les 5 erreurs SEO les plus courantes chez les PME et comment les corriger rapidement pour améliorer votre visibilité en ligne.';
+
+const article = {
+  title: '5 erreurs SEO que font 90% des PME',
+  date: '12 Février 2026',
+  tag: 'SEO',
+  readTime: '6 min',
+  author: 'Rayane',
+};
+---
+
+<Layout title={title} description={description}>
+
+  <article class="section bg-cream">
+    <div class="container-narrow">
+      <!-- Header -->
+      <div class="max-w-2xl mb-12">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="inline-flex items-center text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full border bg-teal/10 text-teal border-teal/20">{article.tag}</span>
+          <span class="text-sm text-muted">{article.readTime} de lecture</span>
+        </div>
+        <h1 class="text-hero mb-4">{article.title}</h1>
+        <div class="flex items-center gap-3 text-sm text-muted">
+          <span>{article.date}</span>
+          <span>•</span>
+          <span>Par {article.author}</span>
+        </div>
+      </div>
+
+      <!-- Image de couverture -->
+      <div class="rounded-3xl overflow-hidden mb-12 bg-gradient-to-br from-teal/20 to-coral/20 h-64 flex items-center justify-center">
+        <div class="text-center">
+          <svg class="w-16 h-16 text-teal mx-auto mb-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"/>
+          </svg>
+          <span class="text-lg font-display font-bold text-navy">Évitez ces pièges courants</span>
+        </div>
+      </div>
+
+      <!-- Contenu -->
+      <div class="prose prose-lg max-w-2xl mx-auto">
+
+        <p class="text-xl text-muted leading-relaxed mb-8">
+          Après des dizaines d'audits de sites PME, je vois les mêmes erreurs revenir systématiquement. La bonne nouvelle ? La plupart sont faciles à corriger.
+        </p>
+
+        <!-- Erreur 1 -->
+        <div class="bg-white rounded-2xl p-6 border border-warm-200 mb-8">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-rose/10 flex items-center justify-center shrink-0">
+              <span class="font-display font-bold text-rose">1</span>
+            </div>
+            <div>
+              <h2 class="text-xl font-display font-bold text-navy mb-3">Ignorer la fiche Google Business</h2>
+              <p class="text-muted leading-relaxed mb-4">
+                C'est l'erreur numéro 1. Beaucoup de PME n'ont pas de fiche Google Business, ou alors elle est incomplète, avec des horaires faux, pas de photos, pas d'avis.
+              </p>
+              <p class="text-muted leading-relaxed mb-4">
+                Pourtant, c'est <strong class="text-navy">gratuit</strong> et c'est souvent la première chose que vos clients voient quand ils vous cherchent.
+              </p>
+              <div class="bg-teal/5 border border-teal/20 rounded-xl p-4">
+                <p class="text-sm font-semibold text-teal mb-2">✓ La solution</p>
+                <p class="text-sm text-muted">Créez ou réclamez votre fiche Google Business. Remplissez toutes les informations : horaires, photos, services, catégorie. Répondez aux avis.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Erreur 2 -->
+        <div class="bg-white rounded-2xl p-6 border border-warm-200 mb-8">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-rose/10 flex items-center justify-center shrink-0">
+              <span class="font-display font-bold text-rose">2</span>
+            </div>
+            <div>
+              <h2 class="text-xl font-display font-bold text-navy mb-3">Un site non responsive (pas adapté mobile)</h2>
+              <p class="text-muted leading-relaxed mb-4">
+                Plus de 60% des recherches se font sur mobile. Si votre site est difficile à naviguer sur téléphone, vous perdez plus de la moitié de vos visiteurs potentiels.
+              </p>
+              <p class="text-muted leading-relaxed mb-4">
+                Google pénalise aussi les sites non responsive dans son classement mobile-first.
+              </p>
+              <div class="bg-teal/5 border border-teal/20 rounded-xl p-4">
+                <p class="text-sm font-semibold text-teal mb-2">✓ La solution</p>
+                <p class="text-sm text-muted">Testez votre site sur mobile. Si le texte est trop petit, les boutons difficiles à cliquer, ou le menu inutilisable, il faut revoir le design.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Erreur 3 -->
+        <div class="bg-white rounded-2xl p-6 border border-warm-200 mb-8">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-rose/10 flex items-center justify-center shrink-0">
+              <span class="font-display font-bold text-rose">3</span>
+            </div>
+            <div>
+              <h2 class="text-xl font-display font-bold text-navy mb-3">Des pages sans titre ni description</h2>
+              <p class="text-muted leading-relaxed mb-4">
+                Chaque page de votre site doit avoir un titre (balise title) et une description (meta description) uniques et pertinents.
+              </p>
+              <p class="text-muted leading-relaxed mb-4">
+                Sans ça, Google affiche ce qu'il veut dans les résultats — souvent du texte qui ne donne pas envie de cliquer.
+              </p>
+              <div class="bg-teal/5 border border-teal/20 rounded-xl p-4">
+                <p class="text-sm font-semibold text-teal mb-2">✓ La solution</p>
+                <p class="text-sm text-muted">Vérifiez chaque page. Le titre doit être clair et inclure votre activité + ville. La description doit donner envie d'en savoir plus.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Erreur 4 -->
+        <div class="bg-white rounded-2xl p-6 border border-warm-200 mb-8">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-rose/10 flex items-center justify-center shrink-0">
+              <span class="font-display font-bold text-rose">4</span>
+            </div>
+            <div>
+              <h2 class="text-xl font-display font-bold text-navy mb-3">Un site trop lent</h2>
+              <p class="text-muted leading-relaxed mb-4">
+                3 secondes de chargement = 40% de visiteurs en moins. C'est aussi simple que ça.
+              </p>
+              <p class="text-muted leading-relaxed mb-4">
+                Les sites lents frustrés les utilisateurs et sont pénalisés par Google. Pourtant, beaucoup de sites PME mettent 5, 6, parfois 10 secondes à charger.
+              </p>
+              <div class="bg-teal/5 border border-teal/20 rounded-xl p-4">
+                <p class="text-sm font-semibold text-teal mb-2">✓ La solution</p>
+                <p class="text-sm text-muted">Testez votre site sur PageSpeed Insights. Optimisez les images, réduisez les scripts inutiles, utilisez un bon hébergement.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Erreur 5 -->
+        <div class="bg-white rounded-2xl p-6 border border-warm-200 mb-8">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-rose/10 flex items-center justify-center shrink-0">
+              <span class="font-display font-bold text-rose">5</span>
+            </div>
+            <div>
+              <h2 class="text-xl font-display font-bold text-navy mb-3">Pas de contenu, ou du contenu trop vague</h2>
+              <p class="text-muted leading-relaxed mb-4">
+                "Bienvenue sur notre site. Nous sommes une entreprise de..." Ce genre de contenu ne dit rien à personne — ni à vos clients, ni à Google.
+              </p>
+              <p class="text-muted leading-relaxed mb-4">
+                Les pages vides ou génériques ne rankent pas. Google a besoin de contenu pour comprendre ce que vous faites et où vous êtes.
+              </p>
+              <div class="bg-teal/5 border border-teal/20 rounded-xl p-4">
+                <p class="text-sm font-semibold text-teal mb-2">✓ La solution</p>
+                <p class="text-sm text-muted">Créez du contenu spécifique : vos services détaillés, votre zone d'intervention, vos réalisations, des réponses aux questions fréquentes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-display font-bold text-navy mt-12 mb-4">Le bonus : ces erreurs se cumulent</h2>
+        <p class="text-muted leading-relaxed mb-6">
+          Le pire, c'est que ces erreurs se renforcent mutuellement. Un site lent + pas de fiche Google + contenu vague = quasi-invisibilité en ligne.
+        </p>
+        <p class="text-muted leading-relaxed mb-6">
+          La bonne nouvelle : corriger une seule de ces erreurs peut déjà faire une différence notable. Les corriger toutes peut transformer votre visibilité.
+        </p>
+
+        <div class="bg-coral/5 border border-coral/20 rounded-2xl p-6 mb-8">
+          <h3 class="font-display font-bold text-lg mb-4 text-coral">Un audit gratuit pour commencer</h3>
+          <p class="text-muted leading-relaxed">
+            Si vous vous reconnaissez dans une ou plusieurs de ces erreurs, pas de panique. Je propose des audits gratuits pour identifier exactement ce qui bloque sur votre site et comment le corriger.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-16 p-8 rounded-3xl bg-navy text-center">
+        <h3 class="font-display font-bold text-2xl text-white mb-4">Vous commettez peut-être ces erreurs ?</h3>
+        <p class="text-white/70 mb-6">Je vous dis exactement où vous en êtes et ce que vous pouvez améliorer — gratuitement.</p>
+        <a href="/contact" class="btn-primary">Demander un audit gratuit</a>
+      </div>
+
+      <!-- Navigation -->
+      <div class="mt-12 pt-8 border-t border-warm-200">
+        <a href="/blog" class="text-coral hover:text-coral/80 transition-colors flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Retour au blog
+        </a>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>

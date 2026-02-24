@@ -1,0 +1,210 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = 'ChatGPT recommande vos concurrents : comment inverser la tendance';
+const description = 'Pourquoi les IA comme ChatGPT recommandent certaines entreprises et pas les autres. Stratégies concrètes pour apparaître dans les réponses.';
+
+const article = {
+  title: 'ChatGPT recommande vos concurrents : comment inverser la tendance',
+  date: '10 Février 2026',
+  tag: 'IA',
+  readTime: '7 min',
+  author: 'Rayane',
+};
+---
+
+<Layout title={title} description={description}>
+
+  <article class="section bg-cream">
+    <div class="container-narrow">
+      <!-- Header -->
+      <div class="max-w-2xl mb-12">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="inline-flex items-center text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full border bg-amber/10 text-amber border-amber/20">{article.tag}</span>
+          <span class="text-sm text-muted">{article.readTime} de lecture</span>
+        </div>
+        <h1 class="text-hero mb-4">{article.title}</h1>
+        <div class="flex items-center gap-3 text-sm text-muted">
+          <span>{article.date}</span>
+          <span>·</span>
+          <span>Par {article.author}</span>
+        </div>
+      </div>
+
+      <!-- Image de couverture -->
+      <div class="rounded-3xl overflow-hidden mb-12 bg-gradient-to-br from-amber/20 to-coral/20 h-64 flex items-center justify-center">
+        <div class="text-center">
+          <svg class="w-16 h-16 text-amber mx-auto mb-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.154-.901-.467-1.226C2.884 15.645 1.5 13.957 1.5 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"/>
+          </svg>
+          <span class="text-lg font-display font-bold text-navy">Être recommandé par l'IA</span>
+        </div>
+      </div>
+
+      <!-- Contenu -->
+      <div class="prose prose-lg max-w-2xl mx-auto">
+
+        <p class="text-xl text-muted leading-relaxed mb-8">
+          Vous avez fait le test : vous avez demandé à ChatGPT "Quel est le meilleur [votre activité] à [votre ville] ?" et il a cité vos concurrents. Pas vous. Frustrant, non ? Voici pourquoi et comment changer ça.
+        </p>
+
+        <h2 class="text-2xl font-display font-bold text-navy mt-12 mb-4">Comment ChatGPT choisit qui recommander</h2>
+        <p class="text-muted leading-relaxed mb-6">
+          ChatGPT (et les autres IA génératives) ne "choisit" pas vraiment. Elles puisent dans leurs données d'entraînement pour formuler des réponses basées sur ce qu'elles ont "appris" du web.
+        </p>
+        <p class="text-muted leading-relaxed mb-6">
+          Si vos concurrents apparaissent et pas vous, c'est probablement parce que :
+        </p>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-amber/10 flex items-center justify-center shrink-0 mt-0.5">
+              <svg class="w-3 h-3 text-amber" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            </span>
+            <span class="text-muted">Ils ont une <strong class="text-navy">présence en ligne plus forte</strong> (plus de mentions, plus de liens)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-amber/10 flex items-center justify-center shrink-0 mt-0.5">
+              <svg class="w-3 h-3 text-amber" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            </span>
+            <span class="text-muted">Leurs informations sont <strong class="text-navy">structurées et faciles à extraire</strong></span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-amber/10 flex items-center justify-center shrink-0 mt-0.5">
+              <svg class="w-3 h-3 text-amber" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            </span>
+            <span class="text-muted">Ils ont des <strong class="text-navy">avis et témoignages</strong> qui renforcent leur crédibilité</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-amber/10 flex items-center justify-center shrink-0 mt-0.5">
+              <svg class="w-3 h-3 text-amber" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            </span>
+            <span class="text-muted">Ils sont cités dans des <strong class="text-navy">articles de presse ou blogs</strong> locaux</span>
+          </li>
+        </ul>
+
+        <h2 class="text-2xl font-display font-bold text-navy mt-12 mb-4">Les 4 leviers pour apparaître</h2>
+
+        <!-- Levier 1 -->
+        <div class="bg-white rounded-2xl p-6 border border-warm-200 mb-6">
+          <h3 class="font-display font-bold text-lg mb-3 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-amber/10 flex items-center justify-center text-amber font-bold">1</span>
+            Les données structurées (Schema.org)
+          </h3>
+          <p class="text-muted leading-relaxed mb-4">
+            Les IA adorent les données structurées. C'est un format standardisé qui leur permet de comprendre exactement ce que vous faites, où vous êtes, et comment vous contacter.
+          </p>
+          <p class="text-muted leading-relaxed">
+            Sans données structurées, l'IA doit "deviner" ces informations. Avec, elles sont clairement indiquées.
+          </p>
+        </div>
+
+        <!-- Levier 2 -->
+        <div class="bg-white rounded-2xl p-6 border border-warm-200 mb-6">
+          <h3 class="font-display font-bold text-lg mb-3 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-amber/10 flex items-center justify-center text-amber font-bold">2</span>
+            La fiche Google Business complète
+          </h3>
+          <p class="text-muted leading-relaxed mb-4">
+            Votre fiche Google Business est une source majeure d'informations pour les IA. Une fiche complète, avec des avis, des photos, des horaires à jour, envoie des signaux forts.
+          </p>
+          <p class="text-muted leading-relaxed">
+            Les entreprises avec des fiches Google bien remplies sont plus souvent citées que celles avec des fiches vides ou inexistantes.
+          </p>
+        </div>
+
+        <!-- Levier 3 -->
+        <div class="bg-white rounded-2xl p-6 border border-warm-200 mb-6">
+          <h3 class="font-display font-bold text-lg mb-3 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-amber/10 flex items-center justify-center text-amber font-bold">3</span>
+            Le contenu factuel et précis
+          </h3>
+          <p class="text-muted leading-relaxed mb-4">
+            Les IA privilégient les informations vérifiables. "Nous intervenons dans un rayon de 30km autour de Lyon" est plus utile que "Nous intervenons dans la région".
+          </p>
+          <p class="text-muted leading-relaxed">
+            Chiffres, zones précises, services détaillés, tarifs si possible : tout ce qui est factuel renforce votre "citableité".
+          </p>
+        </div>
+
+        <!-- Levier 4 -->
+        <div class="bg-white rounded-2xl p-6 border border-warm-200 mb-6">
+          <h3 class="font-display font-bold text-lg mb-3 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-amber/10 flex items-center justify-center text-amber font-bold">4</span>
+            Les signaux de crédibilité (E-E-A-T)
+          </h3>
+          <p class="text-muted leading-relaxed mb-4">
+            E-E-A-T = Expérience, Expertise, Autorité, Fiabilité. C'est ce que Google et les IA utilisent pour évaluer la confiance.
+          </p>
+          <ul class="space-y-2 text-sm text-muted">
+            <li>· <strong class="text-navy">Expérience</strong> : témoignages clients, exemples de réalisations</li>
+            <li>· <strong class="text-navy">Expertise</strong> : certifications, années d'expérience, spécialisations</li>
+            <li>· <strong class="text-navy">Autorité</strong> : mentions dans la presse, liens d'autres sites</li>
+            <li>· <strong class="text-navy">Fiabilité</strong> : avis positifs, informations de contact claires</li>
+          </ul>
+        </div>
+
+        <h2 class="text-2xl font-display font-bold text-navy mt-12 mb-4">Un exemple concret</h2>
+
+        <div class="bg-rose/5 border border-rose/20 rounded-2xl p-6 mb-8">
+          <p class="text-sm font-semibold text-rose mb-3">AVANT : Site non optimisé</p>
+          <p class="text-muted text-sm italic mb-4">
+            "Bienvenue chez Dupont Plomberie. Nous sommes des plombiers expérimentés. Contactez-nous pour vos travaux."
+          </p>
+          <p class="text-sm text-muted">Résultat : ChatGPT ne trouve pas d'information précise, ne cite pas.</p>
+        </div>
+
+        <div class="bg-teal/5 border border-teal/20 rounded-2xl p-6 mb-8">
+          <p class="text-sm font-semibold text-teal mb-3">APRÈS : Site Agentic Friendly</p>
+          <p class="text-muted text-sm italic mb-4">
+            "Dupont Plomberie - Plombier à Lyon 6e depuis 2015. Intervention en 30min, 7j/7. Zone : Lyon et agglomération (30km). +500 interventions. 4,8/5 sur Google (120 avis)."
+          </p>
+          <p class="text-sm text-muted">Résultat : ChatGPT a des informations précises, peut citer.</p>
+        </div>
+
+        <h2 class="text-2xl font-display font-bold text-navy mt-12 mb-4">Combien de temps pour voir des résultats ?</h2>
+        <p class="text-muted leading-relaxed mb-6">
+          Les modèles de langage sont réentraînés régulièrement sur le web. En pratique, les changements que vous faites aujourd'hui peuvent prendre <strong class="text-navy">4 à 8 mois</strong> à être reflétés dans les réponses des IA.
+        </p>
+        <p class="text-muted leading-relaxed mb-6">
+          C'est pourquoi il faut commencer maintenant. Plus vous attendez, plus vos concurrents prennent d'avance.
+        </p>
+
+        <div class="bg-amber/5 border border-amber/20 rounded-2xl p-6 mb-8">
+          <h3 class="font-display font-bold text-lg mb-4 text-amber">Le test à faire aujourd'hui</h3>
+          <ol class="space-y-3 text-muted">
+            <li class="flex gap-3">
+              <span class="w-6 h-6 rounded-full bg-amber text-white flex items-center justify-center shrink-0 text-sm font-bold">1</span>
+              <span>Ouvrez ChatGPT ou Perplexity</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="w-6 h-6 rounded-full bg-amber text-white flex items-center justify-center shrink-0 text-sm font-bold">2</span>
+              <span>Tapez : "Quel est le meilleur [votre activité] à [votre ville] ?"</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="w-6 h-6 rounded-full bg-amber text-white flex items-center justify-center shrink-0 text-sm font-bold">3</span>
+              <span>Observez : êtes-vous cité ? Si non, qui est cité et pourquoi ?</span>
+            </li>
+          </ol>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-16 p-8 rounded-3xl bg-navy text-center">
+        <h3 class="font-display font-bold text-2xl text-white mb-4">Vous n'apparaissez pas dans les réponses de l'IA ?</h3>
+        <p class="text-white/70 mb-6">Je vous explique exactement ce qui manque et comment le corriger.</p>
+        <a href="/contact" class="btn-primary">Demander un audit gratuit</a>
+      </div>
+
+      <!-- Navigation -->
+      <div class="mt-12 pt-8 border-t border-warm-200">
+        <a href="/blog" class="text-coral hover:text-coral/80 transition-colors flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Retour au blog
+        </a>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>

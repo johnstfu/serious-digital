@@ -1,0 +1,183 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = 'Qu\'est-ce que le GEO et pourquoi ça va tout changer';
+const description = 'Le Generative Engine Optimization (GEO) est le nouveau SEO. Apprenez comment optimiser votre site pour ChatGPT, Perplexity et Gemini.';
+
+const article = {
+  title: 'Qu\'est-ce que le GEO et pourquoi ça va tout changer',
+  date: '15 Février 2026',
+  tag: 'GEO',
+  readTime: '5 min',
+  author: 'Rayane',
+};
+---
+
+<Layout title={title} description={description}>
+
+  <article class="section bg-cream">
+    <div class="container-narrow">
+      <!-- Header -->
+      <div class="max-w-2xl mb-12">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="inline-flex items-center text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full border bg-coral/10 text-coral border-coral/20">{article.tag}</span>
+          <span class="text-sm text-muted">{article.readTime} de lecture</span>
+        </div>
+        <h1 class="text-hero mb-4">{article.title}</h1>
+        <div class="flex items-center gap-3 text-sm text-muted">
+          <span>{article.date}</span>
+          <span>•</span>
+          <span>Par {article.author}</span>
+        </div>
+      </div>
+
+      <!-- Image de couverture -->
+      <div class="rounded-3xl overflow-hidden mb-12 bg-gradient-to-br from-coral/20 to-teal/20 h-64 flex items-center justify-center">
+        <div class="text-center">
+          <svg class="w-16 h-16 text-coral mx-auto mb-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/>
+          </svg>
+          <span class="text-lg font-display font-bold text-navy">GEO = Generative Engine Optimization</span>
+        </div>
+      </div>
+
+      <!-- Contenu -->
+      <div class="prose prose-lg max-w-2xl mx-auto">
+
+        <p class="text-xl text-muted leading-relaxed mb-8">
+          Si vous connaissez le SEO, vous savez qu'il s'agit d'être trouvé sur Google. Le GEO, c'est la même logique — mais pour les intelligences artificielles comme ChatGPT, Perplexity et Gemini.
+        </p>
+
+        <h2 class="text-2xl font-display font-bold text-navy mt-12 mb-4">Le problème : vos clients changent de comportement</h2>
+        <p class="text-muted leading-relaxed mb-6">
+          Avant, quand quelqu'un cherchait un restaurant, un artisan ou un service, il tapait une requête sur Google et cliquait sur les premiers résultats.
+        </p>
+        <p class="text-muted leading-relaxed mb-6">
+          Aujourd'hui, une part croissante de ces recherches passe par des assistants IA. Et ces assistants ne classent pas des liens — ils <strong class="text-navy">recommandent des réponses</strong>.
+        </p>
+        <p class="text-muted leading-relaxed mb-6">
+          Concrètement : si quelqu'un demande à ChatGPT "Quel est le meilleur plombier à Lyon ?", l'IA va citer 2-3 noms. Soit vous êtes dans ces noms, soit vous n'existez pas.
+        </p>
+
+        <h2 class="text-2xl font-display font-bold text-navy mt-12 mb-4">La différence entre SEO et GEO</h2>
+
+        <div class="bg-white rounded-2xl p-6 border border-warm-200 mb-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="font-display font-bold text-lg mb-4 flex items-center gap-2">
+                <span class="w-8 h-8 rounded-lg bg-coral/10 flex items-center justify-center">
+                  <svg class="w-4 h-4 text-coral" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
+                  </svg>
+                </span>
+                SEO (Search Engine Optimization)
+              </h3>
+              <ul class="space-y-2 text-sm text-muted">
+                <li>• Optimiser pour les moteurs de recherche</li>
+                <li>• Être dans les premiers résultats Google</li>
+                <li>• Techniques : mots-clés, backlinks, meta tags</li>
+                <li>• Objectif : générer des clics</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-lg mb-4 flex items-center gap-2">
+                <span class="w-8 h-8 rounded-lg bg-teal/10 flex items-center justify-center">
+                  <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/>
+                  </svg>
+                </span>
+                GEO (Generative Engine Optimization)
+              </h3>
+              <ul class="space-y-2 text-sm text-muted">
+                <li>• Optimiser pour les IA génératives</li>
+                <li>• Être cité par ChatGPT, Perplexity, Gemini</li>
+                <li>• Techniques : données structurées, E-E-A-T, contenu factuel</li>
+                <li>• Objectif : être recommandé</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-display font-bold text-navy mt-12 mb-4">Comment fonctionne le GEO ?</h2>
+        <p class="text-muted leading-relaxed mb-6">
+          Les IA génératives utilisent des modèles de langage entraînés sur le web. Quand vous posez une question, elles puisent dans leurs connaissances pour formuler une réponse.
+        </p>
+        <p class="text-muted leading-relaxed mb-6">
+          Pour être cité, votre site doit être :
+        </p>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-teal/10 flex items-center justify-center shrink-0 mt-0.5">
+              <svg class="w-3 h-3 text-teal" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            </span>
+            <span class="text-muted"><strong class="text-navy">Structurellement clair</strong> — Les IA doivent pouvoir extraire vos informations facilement (données structurées Schema.org)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-teal/10 flex items-center justify-center shrink-0 mt-0.5">
+              <svg class="w-3 h-3 text-teal" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            </span>
+            <span class="text-muted"><strong class="text-navy">Factuel et précis</strong> — Les IA privilégient les informations vérifiables et chiffrées</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-teal/10 flex items-center justify-center shrink-0 mt-0.5">
+              <svg class="w-3 h-3 text-teal" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            </span>
+            <span class="text-muted"><strong class="text-navy">Crédible</strong> — Signaux de confiance (E-E-A-T : Expérience, Expertise, Autorité, Fiabilité)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-6 h-6 rounded-full bg-teal/10 flex items-center justify-center shrink-0 mt-0.5">
+              <svg class="w-3 h-3 text-teal" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            </span>
+            <span class="text-muted"><strong class="text-navy">À jour</strong> — Les modèles sont régulièrement réentraînés sur le web actuel</span>
+          </li>
+        </ul>
+
+        <h2 class="text-2xl font-display font-bold text-navy mt-12 mb-4">Ce que vous pouvez faire dès maintenant</h2>
+
+        <div class="bg-teal/5 border border-teal/20 rounded-2xl p-6 mb-8">
+          <h3 class="font-display font-bold text-lg mb-4 text-teal">3 actions concrètes</h3>
+          <ol class="space-y-4 text-muted">
+            <li class="flex gap-3">
+              <span class="w-6 h-6 rounded-full bg-teal text-white flex items-center justify-center shrink-0 text-sm font-bold">1</span>
+              <span><strong class="text-navy">Vérifiez vos données structurées</strong> — Utilisez le tool de Google pour voir si votre site est correctement balisé</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="w-6 h-6 rounded-full bg-teal text-white flex items-center justify-center shrink-0 text-sm font-bold">2</span>
+              <span><strong class="text-navy">Testez votre visibilité IA</strong> — Posez des questions à ChatGPT et Perplexity sur votre activité</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="w-6 h-6 rounded-full bg-teal text-white flex items-center justify-center shrink-0 text-sm font-bold">3</span>
+              <span><strong class="text-navy">Enrichissez votre contenu</strong> — Ajoutez des informations factuelles, des chiffres, des témoignages</span>
+            </li>
+          </ol>
+        </div>
+
+        <h2 class="text-2xl font-display font-bold text-navy mt-12 mb-4">Conclusion</h2>
+        <p class="text-muted leading-relaxed mb-6">
+          Le GEO n'est pas une mode — c'est une évolution fondamentale de la visibilité en ligne. Les entreprises qui s'y préparent maintenant auront une longueur d'avance quand les recherches IA deviendront majoritaires.
+        </p>
+        <p class="text-muted leading-relaxed">
+          Vous voulez savoir où vous en êtes ? Je propose des audits gratuits pour évaluer votre visibilité sur Google ET sur les IA.
+        </p>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-16 p-8 rounded-3xl bg-navy text-center">
+        <h3 class="font-display font-bold text-2xl text-white mb-4">Vous voulez être trouvé par l'IA ?</h3>
+        <p class="text-white/70 mb-6">Je vous explique concrètement ce que vous pouvez faire pour améliorer votre visibilité.</p>
+        <a href="/contact" class="btn-primary">Demander un audit gratuit</a>
+      </div>
+
+      <!-- Navigation -->
+      <div class="mt-12 pt-8 border-t border-warm-200">
+        <a href="/blog" class="text-coral hover:text-coral/80 transition-colors flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Retour au blog
+        </a>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>

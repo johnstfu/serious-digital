@@ -114,35 +114,112 @@ const description = 'Comment je rends votre entreprise visible sur Google et sur
     </div>
   </section>
 
-  <!-- Process -->
+  <!-- Process 3 Étapes -->
   <section class="section">
     <div class="container-narrow">
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-section mb-4">Comment se déroule un projet</h2>
-        <p class="text-lg text-muted">Quatre étapes, du premier échange au suivi sur la durée.</p>
+        <h2 class="text-section mb-4">Ma méthode en 3 étapes</h2>
+        <p class="text-lg text-muted">De l'audit gratuit au suivi continu, un accompagnement pensé pour durer.</p>
       </div>
 
-      <div class="space-y-6">
-        {[
-          { step: '01', title: 'Premier échange', desc: 'Je prends le temps de comprendre votre activité et vos enjeux. Pas de questionnaire — une vraie conversation.', deliverable: 'Un état des lieux clair de votre situation en ligne.', color: '#FF6B4A' },
-          { step: '02', title: 'Construction du site', desc: 'Je conçois et développe votre site en intégrant le SEO et le GEO dès le départ.', deliverable: 'Un site complet, responsive, optimisé pour Google et l\'IA.', color: '#F59E0B' },
-          { step: '03', title: 'Mise en ligne', desc: 'Le site est publié, votre fiche Google est configurée, les outils de suivi sont en place.', deliverable: 'Site en production, fiche Google active, analytics.', color: '#14B8A6' },
-          { step: '04', title: 'Accompagnement', desc: 'Je reste avec vous. Ajustements, aide sur les réseaux, contenu, optimisations continues.', deliverable: 'Points réguliers, ajustements continus, accompagnement réseaux.', color: '#2563EB' },
-        ].map((item) => (
-          <div class="card flex flex-col md:flex-row gap-6 md:gap-8 relative overflow-hidden">
-            <div class="absolute top-0 left-0 w-1.5 h-full" style={`background-color: ${item.color}`}></div>
-            <div class="shrink-0 pl-4 md:pl-2">
-              <div class="w-14 h-14 rounded-2xl flex items-center justify-center" style={`background-color: ${item.color}15; color: ${item.color}`}>
-                <span class="font-display font-bold text-lg">{item.step}</span>
+      <div class="space-y-8">
+        <!-- Étape 1 : Audit gratuit -->
+        <div class="card p-8 relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-2 h-full bg-coral"></div>
+          <div class="flex flex-col md:flex-row gap-6 md:gap-8">
+            <div class="shrink-0">
+              <div class="w-16 h-16 rounded-2xl bg-coral/10 flex items-center justify-center">
+                <span class="font-display font-bold text-2xl text-coral">01</span>
               </div>
             </div>
-            <div class="flex-1 pl-4 md:pl-0">
-              <h3 class="font-display font-bold text-xl mb-3">{item.title}</h3>
-              <p class="text-muted leading-relaxed mb-3">{item.desc}</p>
-              <p class="text-sm"><strong class="text-navy">Ce que vous recevez :</strong> <span class="text-muted">{item.deliverable}</span></p>
+            <div class="flex-1">
+              <div class="flex items-center gap-3 mb-4">
+                <h3 class="font-display font-bold text-2xl">Audit gratuit & Recommandations</h3>
+                <span class="px-3 py-1 bg-coral/10 text-coral text-xs font-semibold rounded-full">GRATUIT</span>
+              </div>
+              <p class="text-muted leading-relaxed mb-4 text-lg">
+                Je analyse votre présence en ligne actuelle : site, fiche Google, réseaux sociaux, et ce que les IA voient de vous.
+                Ensuite, je vous explique clairement ce qui fonctionne, ce qui bloque, et ce qu'on peut faire ensemble.
+              </p>
+              <div class="bg-cream rounded-xl p-5">
+                <p class="text-sm font-semibold text-navy mb-3">Ce que vous recevez :</p>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-muted">
+                  <li class="flex items-center gap-2"><svg class="w-4 h-4 text-coral" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Diagnostic SEO complet</li>
+                  <li class="flex items-center gap-2"><svg class="w-4 h-4 text-coral" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Analyse GEO (visibilité IA)</li>
+                  <li class="flex items-center gap-2"><svg class="w-4 h-4 text-coral" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Recommandations prioritaires</li>
+                  <li class="flex items-center gap-2"><svg class="w-4 h-4 text-coral" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Proposition adaptée à vos besoins</li>
+                </ul>
+              </div>
             </div>
           </div>
-        ))}
+        </div>
+
+        <!-- Étape 2 : Réalisation -->
+        <div class="card p-8 relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-2 h-full bg-teal"></div>
+          <div class="flex flex-col md:flex-row gap-6 md:gap-8">
+            <div class="shrink-0">
+              <div class="w-16 h-16 rounded-2xl bg-teal/10 flex items-center justify-center">
+                <span class="font-display font-bold text-2xl text-teal">02</span>
+              </div>
+            </div>
+            <div class="flex-1">
+              <h3 class="font-display font-bold text-2xl mb-4">Création / Refonte & Social Listening</h3>
+              <p class="text-muted leading-relaxed mb-4 text-lg">
+                Selon vos besoins, je crée ou refais votre site en version Agentic Friendly, et/ou je mets en place
+                le Social Listening pour surveiller votre e-réputation. Tout est pensé pour Google ET les IA.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-cream rounded-xl p-5">
+                  <p class="text-sm font-semibold text-navy mb-3">🌐 Site Agentic Friendly</p>
+                  <ul class="space-y-2 text-sm text-muted">
+                    <li class="flex items-center gap-2"><svg class="w-4 h-4 text-teal" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Design moderne & responsive</li>
+                    <li class="flex items-center gap-2"><svg class="w-4 h-4 text-teal" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>SEO + GEO intégrés</li>
+                    <li class="flex items-center gap-2"><svg class="w-4 h-4 text-teal" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Fiche Google Business</li>
+                  </ul>
+                </div>
+                <div class="bg-cream rounded-xl p-5">
+                  <p class="text-sm font-semibold text-navy mb-3">📊 Social Listening</p>
+                  <ul class="space-y-2 text-sm text-muted">
+                    <li class="flex items-center gap-2"><svg class="w-4 h-4 text-teal" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Surveillance avis & notes</li>
+                    <li class="flex items-center gap-2"><svg class="w-4 h-4 text-teal" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Alertes en temps réel</li>
+                    <li class="flex items-center gap-2"><svg class="w-4 h-4 text-teal" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Tableau de bord unifié</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Étape 3 : Suivi -->
+        <div class="card p-8 relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-2 h-full bg-navy"></div>
+          <div class="flex flex-col md:flex-row gap-6 md:gap-8">
+            <div class="shrink-0">
+              <div class="w-16 h-16 rounded-2xl bg-navy/10 flex items-center justify-center">
+                <span class="font-display font-bold text-2xl text-navy">03</span>
+              </div>
+            </div>
+            <div class="flex-1">
+              <h3 class="font-display font-bold text-2xl mb-4">Suivi, Maintenance & Amélioration</h3>
+              <p class="text-muted leading-relaxed mb-4 text-lg">
+                Je reste à vos côtés après la mise en ligne. Mises à jour, ajustements, corrections,
+                optimisations continues — votre présence en ligne reste vivante et performante.
+              </p>
+              <div class="bg-cream rounded-xl p-5">
+                <p class="text-sm font-semibold text-navy mb-3">Ce qui est inclus :</p>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-muted">
+                  <li class="flex items-center gap-2"><svg class="w-4 h-4 text-navy" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Mises à jour de sécurité</li>
+                  <li class="flex items-center gap-2"><svg class="w-4 h-4 text-navy" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Corrections rapides</li>
+                  <li class="flex items-center gap-2"><svg class="w-4 h-4 text-navy" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Optimisations SEO continues</li>
+                  <li class="flex items-center gap-2"><svg class="w-4 h-4 text-navy" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Support réactif</li>
+                  <li class="flex items-center gap-2"><svg class="w-4 h-4 text-navy" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Rapports mensuels</li>
+                  <li class="flex items-center gap-2"><svg class="w-4 h-4 text-navy" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Conseils stratégiques</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
